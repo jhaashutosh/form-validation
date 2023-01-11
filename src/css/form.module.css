@@ -1,7 +1,6 @@
 .form {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   border: 2px solid black;
   width: 50%;
@@ -12,14 +11,13 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 .form-input {
   font-size: 16px;
   margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 label {
   margin: 0px 20px;

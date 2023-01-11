@@ -1,0 +1,40 @@
+.modal {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 2px solid rgb(67, 47, 86);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.title {
+  background-color: rgb(67, 47, 86);
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.modal-desc {
+  font-size: 16px;
+  padding-top: 30px;
+  padding-left: 20px;
+  background-color: white;
+}
+.modal-btn {
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+}
+.modal-btn button {
+  background-color: rgb(67, 47, 86);
+  width: 60px;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+}

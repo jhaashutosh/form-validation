@@ -1,26 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../css/form.module.css";
 
-const form = () => {
+const Form = (props) => {
+  const [username, setUsername] = useState("");
+  const [age, setAge] = useState("");
+
+  const userHandler = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const ageHandler = (e) => {
+    setAge(e.target.value);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const user = {
+      username: username,
+      age: age,
+    };
+    console.log(user);
+    props.userData(user);
+    setUsername("");
+    setAge("");
+  };
   return (
     <div className={styles["form-container"]}>
       <form className={styles.form}>
         <div className={styles["form-input"]}>
           <label htmlFor="username">username</label>
-          <input id="username" type="text"></input>
+          <input
+            id="username"
+            type="text"
+            value={username}
+            onChange={userHandler}
+          ></input>
         </div>
         <div className={styles["form-input"]}>
-          <label htmlFor="password">password</label>
-          <input id="password" type="password"></input>
+          <label htmlFor="age">Age</label>
+          <input
+            id="age"
+            type="number"
+            value={age}
+            onChange={ageHandler}
+          ></input>
         </div>
 
         <div className={styles["form-input"]}>
-          <label htmlFor="submit">submit</label>
-          <input id="submit" type="submit"></input>
+          <button id="submit" type="submit" onClick={submitHandler}>
+            submit
+          </button>
         </div>
       </form>
     </div>
   );
 };
 
-export default form;
+export default Form;
